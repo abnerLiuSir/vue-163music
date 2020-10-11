@@ -1,24 +1,26 @@
 <template>
 	<div id="app">
 		<Row class="top">			
-			<music-nav class="music-nav "></music-nav>
+			<music-nav></music-nav>
 		</Row>
 		<Row class="center">
 			<router-view></router-view>
 		</Row>
 		<Row class="bottom">
-			<music-nav class="music-nav "></music-nav>
+			<music-controller></music-controller>
 		</Row>
 	</div>
 </template>
 
 <script>
 import musicNav from './components/nav/index'
+import musicController from './components/controller/index'
 
 export default {
 	name: 'app',
 	components: {
 		musicNav: musicNav,
+		musicController: musicController
 	}
 }
 </script>
@@ -29,8 +31,13 @@ export default {
 		font-family: 'Avenir', Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+		-moz-user-select: none; 
+        -webkit-user-select: none; 
+        -ms-user-select: none; 
+        -khtml-user-select: none; 
+        -o-user-select: none; 
+        user-select: none;
 		text-align: center;
-		color: #2c3e50;
 		display: flex;
 		flex-direction: column;
 		position: absolute;
@@ -39,14 +46,15 @@ export default {
 		bottom: 0;
 		.top {
 			height: 4.375rem;
-			background: rgb(36,36,36);
+			background: #000C40;
 		}
 		.center {
 			flex: 1;
+			background: linear-gradient( #000C40, #F0F2F0);
 		}
 		.bottom {
 			height: 3.3125rem;
-			background: rgb(51,51,51);
+			background: linear-gradient(#F0F2F0, #FAFFD1);
 		}
 	}
 </style>
