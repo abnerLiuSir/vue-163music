@@ -45,7 +45,6 @@ export default {
 		top: 0;
 		bottom: 0;
 		.top {
-			height: 4.375rem;
 			background: #000C40;
 		}
 		.center {
