@@ -48,7 +48,7 @@ export default {
             navType: "/discovery",
             childNavList: [
                 {
-                    type: "/recommend",
+                    type: "/",
                     name: "推荐"
                 },
                 {
@@ -83,7 +83,7 @@ export default {
             this.navType = e.target.type
         },
         discoveryRouteHandle(e) {
-            console.log(e.target.type)
+            this.$router.push({ path: '/discovery' + e.target.type })
         }
     }
 }

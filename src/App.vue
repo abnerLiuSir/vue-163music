@@ -50,6 +50,8 @@ export default {
 		.center {
 			flex: 1;
 			background: linear-gradient( #000C40, #F0F2F0);
+			color: #000;
+			overflow: scroll;
 		}
 		.bottom {
 			height: 3.3125rem;

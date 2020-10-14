@@ -4,7 +4,7 @@
             :autoplay="setting.autoplay"
             :autoplay-speed="setting.autoplaySpeed"
         >
-            <Carousel-item v-for="items in banners" :key="items.targetId">
+            <Carousel-item v-for="(items, keys) in banners" :key="keys">
                 <img class="image" :src="items.imageUrl">
             </Carousel-item>
         </Carousel>
@@ -39,7 +39,7 @@ export default {
         position: relative;
         .image {
             height: 285px;
-            width: 730px;
+            width: 722px;
         }
         /deep/ .ivu-carousel-arrow.right {
             right: -6rem;
