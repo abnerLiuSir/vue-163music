@@ -10,7 +10,7 @@
                     </li>
                 </ul>
             </i-col>
-            <i-col offset="9">
+            <i-col class="more">
                 <router-link style="color: #666;font-size: 16px" :to="'/discovery/' + sort">更多...</router-link>
             </i-col>
         </Row>
@@ -58,6 +58,10 @@ export default {
                     }
                 }
             }
+        }
+        .more {
+            position: absolute;
+            right: 40px;
         }
     }
 </style>

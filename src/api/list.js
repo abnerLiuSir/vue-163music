@@ -9,3 +9,9 @@ export const DISCOVERY_HOT_RECOMMEND = (params) => {
     params.route = "personalized"
     return Get('/forward', params)
 }
+
+
+export const DISCOVERY_HOT_ALBUM = (params) => {
+    params.route = "top_album"
+    return Get('/forward', params)
+}
